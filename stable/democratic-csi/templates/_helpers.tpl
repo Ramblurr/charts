@@ -33,11 +33,7 @@ Create chart name and version as used by the chart label.
 
 
 {{- define "democratic-csi.mount-iscsi" -}}
-{{- if contains "iscsi" .Values.driver.config.driver }}
-{{- printf "%s" "true" -}}
-{{- else }}
 {{- printf "%s" "false" -}}
-{{- end }}
 {{- end -}}
 
 {{- define "democratic-csi.external-provisioner-container" -}}
